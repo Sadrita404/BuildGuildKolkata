@@ -1445,3 +1445,96 @@ nav {
 .alt-bg {
   background: var(--bp-darker);
 }
+
+/* ===== HACK CLUB PROGRAMS SECTION ===== */
+.programs-section {
+  background: var(--bp-dark);
+  padding: 72px 24px;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.program-card {
+  background: linear-gradient(135deg, var(--bp-darker) 0%, rgba(52, 75, 106, 0.5) 100%);
+  border: 2px solid rgba(255,255,255,0.12);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 200, 87, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.program-card:hover {
+  background: linear-gradient(135deg, var(--bp-lighter) 0%, rgba(52, 75, 106, 0.8) 100%);
+  border-color: var(--bp-warning);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(255, 200, 87, 0.15);
+}
+
+.program-card:hover::before {
+  opacity: 1;
+}
+
+.program-icon {
+  font-size: 40px;
+  line-height: 1;
+  display: block;
+}
+
+.program-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.program-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.program-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bp-warning);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.program-link:hover {
+  gap: 12px;
+  color: white;
+}
