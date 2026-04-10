@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- GenXYZ Logo -->
+  <rect width="200" height="200" rx="24" fill="#4B2A6F"/>
+  
+  <!-- Dot -->
+  <circle cx="34" cy="100" r="12" fill="white"/>
+  
+  <!-- X -->
+  <g transform="translate(70, 60)">
+    <path d="M 0 0 L 30 50" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 30 0 L 0 50" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Y -->
+  <g transform="translate(110, 60)">
+    <path d="M 0 0 L 15 25" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 30 0 L 15 25" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 15 25 L 15 50" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Z -->
+  <g transform="translate(150, 60)">
+    <path d="M 0 0 L 30 0" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 30 0 L 0 50" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 0 50 L 30 50" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
