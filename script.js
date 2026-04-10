@@ -69,4 +69,20 @@ function resetAutoRotate() {
 document.addEventListener('DOMContentLoaded', function() {
   showProject(0);
   autoRotateInterval = setInterval(autoRotate, 5000);
+  
+  // Initialize project strip carousel
+  const carouselBtns = document.querySelectorAll('.carousel-btn');
+  carouselBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const track = document.getElementById(targetId);
+      const scrollAmount = 360; // Card width + gap
+      
+      if (btn.classList.contains('carousel-btn-prev')) {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else if (btn.classList.contains('carousel-btn-next')) {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    });
+  });
 });
